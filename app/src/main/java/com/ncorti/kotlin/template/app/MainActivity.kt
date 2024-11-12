@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.textResult.text = getString(R.string.hello_world)
+        binding.textResult.visibility = View.VISIBLE
+
         binding.buttonCompute.setOnClickListener {
             val message = if (binding.editTextFactorial.text.isNotEmpty()) {
                 val input = binding.editTextFactorial.text.toString().toLong()
